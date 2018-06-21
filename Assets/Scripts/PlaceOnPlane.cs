@@ -8,16 +8,44 @@ public class PlaceOnPlane : MonoBehaviour
 {
     [SerializeField]
     [Tooltip("Instantiates this prefab on a plane at the touch location.")]
-    GameObject m_PlacedPrefab;
+    GameObject[] m_PlacedPrefab;
+
+
+    private bool IsFingerHeldDown = false;
+
+    public void FingerDoubleTap() {
+        Debug.Log("Double tap! Destroy object");
+        Destroy(placedObject);
+        placedObject = null;
+    }
 
     /// <summary>
     /// The prefab to instantiate on touch.
     /// </summary>
     public GameObject placedPrefab
     {
-        get { return m_PlacedPrefab; }
-        set { m_PlacedPrefab = value; }
+        get { return m_PlacedPrefab[prefabIndex]; }
+        set { m_PlacedPrefab[prefabIndex] = value; }
     }
+
+    bool b = false;
+    int prefabIndex = 0;
+    public void SwapPlacedPrefab() {
+
+        Debug.Log("Swiped! Changed the prefab...");
+
+        b = !b;
+
+        if (b)
+        {
+            prefabIndex = 0;
+        }
+        else {
+            prefabIndex = 1;
+        }
+    }
+
+
 
     /// <summary>
     /// The object instantiated as a result of a successful raycast intersection with a plane.
@@ -31,6 +59,9 @@ public class PlaceOnPlane : MonoBehaviour
 
     void Update()
     {
+        if (Input.touchCount == 2)
+            return;
+
         if (Input.touchCount == 0)
             return;
 
@@ -55,9 +86,10 @@ public class PlaceOnPlane : MonoBehaviour
         {
             m_PlacementHit = value;
 
-            if (placedObject == null && m_PlacedPrefab != null)
+            if (placedObject == null && m_PlacedPrefab[prefabIndex] != null) //Here is where we are initially instantiated
             {
-                placedObject = Instantiate(m_PlacedPrefab);
+                //Here
+                placedObject = Instantiate(m_PlacedPrefab[prefabIndex]);
             }
 
             if (placedObject != null)
