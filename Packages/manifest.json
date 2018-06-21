@@ -2,6 +2,7 @@
   "dependencies": {
     "com.unity.xr.arcore": "1.0.0-preview.16",
     "com.unity.xr.arkit": "1.0.0-preview.11",
-    "com.unity.xr.arfoundation": "1.0.0-preview.12"
+    "com.unity.xr.arfoundation": "1.0.0-preview.12",
+    "com.unity.postprocessing": "2.0.7-preview"
   }
 }
