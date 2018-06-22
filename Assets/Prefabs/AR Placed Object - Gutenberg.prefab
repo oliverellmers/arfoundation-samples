@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33267116426378118}
   - component: {fileID: 23589461175778766}
   - component: {fileID: 64342719930012192}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 65813862589124190}
   - component: {fileID: 114774974837470510}
   - component: {fileID: 114237597472146818}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Gutenberg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4691097715073524}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AR Placed Object - Gutenberg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,8 +98,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1554308778270126}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.038825016, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4554783290781092}
